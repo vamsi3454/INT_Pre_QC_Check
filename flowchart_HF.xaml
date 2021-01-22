@@ -1,9 +1,9 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="flowchart_ingest" this:flowchart_ingest.search="&lt;html app='chrome.exe' title='CLEAR' /&gt;&lt;webctrl id='Search' tag='INPUT' /&gt;" this:flowchart_ingest.get_status_selector="&lt;html app='chrome.exe' title='CLEAR' /&gt;&lt;webctrl parentid='drpDown_' tag='SPAN' /&gt;" this:flowchart_ingest.click_dm_level_ingest="&lt;html app='chrome.exe' title='CLEAR' /&gt;&lt;webctrl parentid='main_wfStatusBar' aaname='ING' idx='1' /&gt;" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="flowchart_ingest" this:flowchart_ingest.search="&lt;html app='chrome.exe' title='CLEAR' /&gt;&lt;webctrl id='Search' tag='INPUT' /&gt;" this:flowchart_ingest.get_status_selector="&lt;html app='chrome.exe' title='CLEAR' /&gt;&lt;webctrl parentid='drpDown_' tag='SPAN' /&gt;" this:flowchart_ingest.click_hf_dm="&lt;html app='chrome.exe' title='CLEAR' /&gt;&lt;webctrl aaname='HF' parentid='main_wfStatusBar' idx='1' /&gt;" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="search" Type="InArgument(x:String)" />
     <x:Property Name="get_status_selector" Type="InArgument(x:String)" />
     <x:Property Name="report_path" Type="InArgument(x:String)" />
-    <x:Property Name="click_dm_level_ingest" Type="InArgument(x:String)" />
+    <x:Property Name="click_hf_dm" Type="InArgument(x:String)" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
@@ -73,7 +73,7 @@
       <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="flowchart_ingest" sap:VirtualizedContainerService.HintSize="676,728" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="flowchart_HF" sap:VirtualizedContainerService.HintSize="676,728" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -122,7 +122,7 @@
               </ui:CursorPosition>
             </ui:Click.CursorPosition>
             <ui:Click.Target>
-              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e52e81f5-ddd6-428f-bb8b-51a7a7e0feb6" InformativeScreenshot="c2cd342c9b7f66317032af5af2486032" Selector="[click_dm_level_ingest]">
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e52e81f5-ddd6-428f-bb8b-51a7a7e0feb6" InformativeScreenshot="bb86bb8e54b472e842f69b85a48bc993" Selector="[click_hf_dm]">
                 <ui:Target.TimeoutMS>
                   <InArgument x:TypeArguments="x:Int32" />
                 </ui:Target.TimeoutMS>
@@ -145,7 +145,7 @@
             </sap:WorkflowViewStateService.ViewState>
             <ui:UiElementExists DisplayName="Element Exists" Exists="[found]" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="UiElementExists_2">
               <ui:UiElementExists.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="6a996d15-913c-4475-8f1f-6b596d3802e7" InformativeScreenshot="2a7d1aec96a490ea2c3472d217f26fae" Selector="&lt;html app='chrome.exe' title='CLEAR' /&gt;&lt;webctrl id='drpDown_' parentname='progressInfo' /&gt;">
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="6a996d15-913c-4475-8f1f-6b596d3802e7" InformativeScreenshot="f9fbf377090e17ccc2b725db2d495751" Selector="&lt;html app='chrome.exe' title='CLEAR' /&gt;&lt;webctrl id='drpDown_' parentname='progressInfo' /&gt;">
                   <ui:Target.TimeoutMS>
                     <InArgument x:TypeArguments="x:Int32" />
                   </ui:Target.TimeoutMS>
@@ -179,7 +179,7 @@
                         <av:Size x:Key="ShapeSize">200,66</av:Size>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <Sequence DisplayName="Ingest_Status check" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                    <Sequence DisplayName="HF_Status check" sap:VirtualizedContainerService.HintSize="992,1330" sap2010:WorkflowViewState.IdRef="Sequence_3">
                       <Sequence.Variables>
                         <Variable x:TypeArguments="x:Boolean" Name="found" />
                         <Variable x:TypeArguments="x:String" Name="getStatus" />
@@ -189,7 +189,7 @@
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="950,91" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;found status&quot;]" />
+                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="950,91" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;HF found&quot;]" />
                       <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Status-Inprogress\Completed" sap:VirtualizedContainerService.HintSize="950,106" sap2010:WorkflowViewState.IdRef="GetValue_1">
                         <ui:GetValue.Target>
                           <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="229d6d61-50ed-4bb1-9e4c-4663048b6079" InformativeScreenshot="c1724b3a8c042f4defa55fa23d3641b8" Selector="[get_status_selector]">
@@ -207,43 +207,54 @@
                       </ui:GetValue>
                       <If Condition="[getStatus.Contains(&quot;Completed&quot;)]" sap:VirtualizedContainerService.HintSize="950,961" sap2010:WorkflowViewState.IdRef="If_2">
                         <If.Then>
-                          <Sequence sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                          <Sequence sap:VirtualizedContainerService.HintSize="478,913" sap2010:WorkflowViewState.IdRef="Sequence_11">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click-Media" sap:VirtualizedContainerService.HintSize="478,68" sap2010:WorkflowViewState.IdRef="Click_6" KeyModifiers="None" MouseButton="BTN_LEFT">
-                              <ui:Click.CursorPosition>
-                                <ui:CursorPosition Position="Center">
-                                  <ui:CursorPosition.OffsetX>
-                                    <InArgument x:TypeArguments="x:Int32" />
-                                  </ui:CursorPosition.OffsetX>
-                                  <ui:CursorPosition.OffsetY>
-                                    <InArgument x:TypeArguments="x:Int32" />
-                                  </ui:CursorPosition.OffsetY>
-                                </ui:CursorPosition>
-                              </ui:Click.CursorPosition>
-                              <ui:Click.Target>
-                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e52e81f5-ddd6-428f-bb8b-51a7a7e0feb6" Selector="[click_dm_level_ingest]">
-                                  <ui:Target.TimeoutMS>
-                                    <InArgument x:TypeArguments="x:Int32" />
-                                  </ui:Target.TimeoutMS>
-                                  <ui:Target.WaitForReady>
-                                    <InArgument x:TypeArguments="ui:WaitForReady" />
-                                  </ui:Target.WaitForReady>
-                                </ui:Target>
-                              </ui:Click.Target>
-                            </ui:Click>
-                            <Sequence sap:VirtualizedContainerService.HintSize="478,651" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="436,238" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+                              <ui:CommentOut.Body>
+                                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,160" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click-Media" sap:VirtualizedContainerService.HintSize="334,68" sap2010:WorkflowViewState.IdRef="Click_6" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                    <ui:Click.CursorPosition>
+                                      <ui:CursorPosition Position="Center">
+                                        <ui:CursorPosition.OffsetX>
+                                          <InArgument x:TypeArguments="x:Int32" />
+                                        </ui:CursorPosition.OffsetX>
+                                        <ui:CursorPosition.OffsetY>
+                                          <InArgument x:TypeArguments="x:Int32" />
+                                        </ui:CursorPosition.OffsetY>
+                                      </ui:CursorPosition>
+                                    </ui:Click.CursorPosition>
+                                    <ui:Click.Target>
+                                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e52e81f5-ddd6-428f-bb8b-51a7a7e0feb6" Selector="[click_hf_dm]">
+                                        <ui:Target.TimeoutMS>
+                                          <InArgument x:TypeArguments="x:Int32" />
+                                        </ui:Target.TimeoutMS>
+                                        <ui:Target.WaitForReady>
+                                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                                        </ui:Target.WaitForReady>
+                                      </ui:Target>
+                                    </ui:Click.Target>
+                                  </ui:Click>
+                                </Sequence>
+                              </ui:CommentOut.Body>
+                            </ui:CommentOut>
+                            <Sequence sap:VirtualizedContainerService.HintSize="436,543" sap2010:WorkflowViewState.IdRef="Sequence_10">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="436,91" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;Ingest is completed&quot;]">
+                              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;HF is completed&quot;]">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -251,27 +262,17 @@
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
                               </ui:LogMessage>
-                              <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="436,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Report.xaml">
+                              <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Report.xaml">
                                 <ui:InvokeWorkflowFile.Arguments>
                                   <InArgument x:TypeArguments="x:String" x:Key="addStatus">Pass</InArgument>
-                                  <InArgument x:TypeArguments="x:String" x:Key="addModules">Ingest status in DM level</InArgument>
-                                  <InArgument x:TypeArguments="x:String" x:Key="addExptedResults">Ingest status in DM level is completed</InArgument>
+                                  <InArgument x:TypeArguments="x:String" x:Key="addModules">House format (HF) medialevel</InArgument>
+                                  <InArgument x:TypeArguments="x:String" x:Key="addExptedResults">House format (HF) medialevel is completed</InArgument>
                                   <InArgument x:TypeArguments="x:String" x:Key="Final_ReportPath">[report_path]</InArgument>
                                   <InArgument x:TypeArguments="x:String" x:Key="SheetName">Results</InArgument>
                                 </ui:InvokeWorkflowFile.Arguments>
                               </ui:InvokeWorkflowFile>
-                              <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="436,276" sap2010:WorkflowViewState.IdRef="CommentOut_2">
-                                <ui:CommentOut.Body>
-                                  <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,198" sap2010:WorkflowViewState.IdRef="Sequence_16">
-                                    <sap:WorkflowViewStateService.ViewState>
-                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                      </scg:Dictionary>
-                                    </sap:WorkflowViewStateService.ViewState>
-                                    <ui:CloseWindow TimeoutMS="{x:Null}" UseWindow="{x:Null}" DisplayName="Close Window 'chrome.exe  CLEAR'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="CloseWindow_1" InformativeScreenshot="c4f393dc45f2b25127a14438a5879fce" Selector="&lt;html app='chrome.exe' title='CLEAR' /&gt;" WaitForReady="INTERACTIVE" />
-                                  </Sequence>
-                                </ui:CommentOut.Body>
-                              </ui:CommentOut>
+                              <Delay Duration="00:00:03" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Delay_4" />
+                              <ui:CloseWindow TimeoutMS="{x:Null}" UseWindow="{x:Null}" DisplayName="Close Window 'chrome.exe  CLEAR'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="CloseWindow_1" InformativeScreenshot="c4f393dc45f2b25127a14438a5879fce" Selector="&lt;html app='chrome.exe' title='CLEAR' /&gt;" WaitForReady="INTERACTIVE" />
                             </Sequence>
                           </Sequence>
                         </If.Then>
@@ -304,7 +305,7 @@
                                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
-                                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Info" Message="[&quot;Ingest is In Progress&quot;]">
+                                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Info" Message="[&quot;HF is In Progress&quot;]">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -315,8 +316,8 @@
                                     <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Report.xaml">
                                       <ui:InvokeWorkflowFile.Arguments>
                                         <InArgument x:TypeArguments="x:String" x:Key="addStatus">Pass</InArgument>
-                                        <InArgument x:TypeArguments="x:String" x:Key="addModules">DM Level Ingest status</InArgument>
-                                        <InArgument x:TypeArguments="x:String" x:Key="addExptedResults">DM Level Ingest status is in Progress</InArgument>
+                                        <InArgument x:TypeArguments="x:String" x:Key="addModules" xml:space="preserve">Medal Level House format </InArgument>
+                                        <InArgument x:TypeArguments="x:String" x:Key="addExptedResults" xml:space="preserve">Medal Level House format  is in Progress</InArgument>
                                         <InArgument x:TypeArguments="x:String" x:Key="Final_ReportPath">[report_path]</InArgument>
                                         <InArgument x:TypeArguments="x:String" x:Key="SheetName">Results</InArgument>
                                       </ui:InvokeWorkflowFile.Arguments>
@@ -325,7 +326,7 @@
                                   </Sequence>
                                 </If.Then>
                                 <If.Else>
-                                  <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="456,800" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+                                  <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="TryCatch_1">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -345,7 +346,7 @@
                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
-                                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;DM level  is not completed due to some issue in pre qc &quot;]">
+                                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;HF is not completed due to some issue in pre qc &quot;]">
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -356,8 +357,8 @@
                                           <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Report.xaml">
                                             <ui:InvokeWorkflowFile.Arguments>
                                               <InArgument x:TypeArguments="x:String" x:Key="addStatus">Fail</InArgument>
-                                              <InArgument x:TypeArguments="x:String" x:Key="addModules">DM level Ingest</InArgument>
-                                              <InArgument x:TypeArguments="x:String" x:Key="addExptedResults" xml:space="preserve">DM level ingest still not started Please check if any issue </InArgument>
+                                              <InArgument x:TypeArguments="x:String" x:Key="addModules" xml:space="preserve">Media level House format </InArgument>
+                                              <InArgument x:TypeArguments="x:String" x:Key="addExptedResults" xml:space="preserve">SMedia level House format still not started Please check if any issue </InArgument>
                                               <InArgument x:TypeArguments="x:String" x:Key="Final_ReportPath">[report_path]</InArgument>
                                               <InArgument x:TypeArguments="x:String" x:Key="SheetName">Results</InArgument>
                                             </ui:InvokeWorkflowFile.Arguments>
