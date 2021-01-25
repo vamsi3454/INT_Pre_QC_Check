@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="753,519" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="786,519" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -318,18 +318,10 @@
                                 <State.Entry>
                                   <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke flowchart_ingest workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_9" UnSafe="False" WorkflowFileName="flowchart_ingest.xaml">
                                     <ui:InvokeWorkflowFile.Arguments>
-                                      <InArgument x:TypeArguments="x:String" x:Key="search">
-                                        <Literal x:TypeArguments="x:String">&lt;html app='chrome.exe' title='CLEAR' /&gt;&lt;webctrl id='Search' tag='INPUT' /&gt;</Literal>
-                                      </InArgument>
-                                      <InArgument x:TypeArguments="x:String" x:Key="get_status_selector">
-                                        <Literal x:TypeArguments="x:String">&lt;html app='chrome.exe' title='CLEAR' /&gt;&lt;webctrl parentid='drpDown_' tag='SPAN' /&gt;</Literal>
-                                      </InArgument>
-                                      <InArgument x:TypeArguments="x:String" x:Key="report_path">
-                                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Out_Config(&quot;Reportpath&quot;).ToString" />
-                                      </InArgument>
-                                      <InArgument x:TypeArguments="x:String" x:Key="click_dm_level_ingest">
-                                        <Literal x:TypeArguments="x:String">&lt;html app='chrome.exe' title='CLEAR' /&gt;&lt;webctrl parentid='main_wfStatusBar' aaname='ING' idx='1' /&gt;</Literal>
-                                      </InArgument>
+                                      <InArgument x:TypeArguments="x:String" x:Key="search">&lt;html app='chrome.exe' title='CLEAR' /&gt;&lt;webctrl id='Search' tag='INPUT' /&gt;</InArgument>
+                                      <InArgument x:TypeArguments="x:String" x:Key="get_status_selector">&lt;html app='chrome.exe' title='CLEAR' /&gt;&lt;webctrl parentid='drpDown_' tag='SPAN' /&gt;</InArgument>
+                                      <InArgument x:TypeArguments="x:String" x:Key="report_path">[Out_Config("Reportpath").ToString]</InArgument>
+                                      <InArgument x:TypeArguments="x:String" x:Key="click_dm_level_ingest">&lt;html app='chrome.exe' title='CLEAR' /&gt;&lt;webctrl parentid='main_wfStatusBar' aaname='ING' idx='1' /&gt;</InArgument>
                                     </ui:InvokeWorkflowFile.Arguments>
                                   </ui:InvokeWorkflowFile>
                                 </State.Entry>
@@ -357,26 +349,14 @@
                                         <State.Entry>
                                           <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke flowchart_AQC workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_10" UnSafe="False" WorkflowFileName="flowchart_AQC_Status.xaml">
                                             <ui:InvokeWorkflowFile.Arguments>
-                                              <InArgument x:TypeArguments="x:String" x:Key="search">
-                                                <Literal x:TypeArguments="x:String">&lt;html app='chrome.exe' title='CLEAR' /&gt;&lt;webctrl id='Search' tag='INPUT' /&gt;</Literal>
-                                              </InArgument>
-                                              <InArgument x:TypeArguments="x:String" x:Key="click_media_level_ingest">
-                                                <Literal x:TypeArguments="x:String">&lt;html app='chrome.exe' title='CLEAR' /&gt;&lt;webctrl aaname='ING' parentid='main_wfStatusBar' tag='SPAN' /&gt;</Literal>
-                                              </InArgument>
-                                              <InArgument x:TypeArguments="x:String" x:Key="get_status_selector">
-                                                <Literal x:TypeArguments="x:String">&lt;html app='chrome.exe' title='CLEAR' /&gt;&lt;webctrl parentid='drpDown_' tag='SPAN' /&gt;</Literal>
-                                              </InArgument>
-                                              <InArgument x:TypeArguments="x:String" x:Key="report_path">
-                                                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Out_Config(&quot;Reportpath&quot;).ToString" />
-                                              </InArgument>
-                                              <InArgument x:TypeArguments="x:String" x:Key="Click_override_pass">
-                                                <Literal x:TypeArguments="x:String" xml:space="preserve">&lt;html app='chrome.exe' title='CLEAR' /&gt;
-&lt;webctrl parentid='drpDown_1' aaname='                             AQC Override Pass                         ' /&gt;</Literal>
-                                              </InArgument>
+                                              <InArgument x:TypeArguments="x:String" x:Key="search">&lt;html app='chrome.exe' title='CLEAR' /&gt;&lt;webctrl id='Search' tag='INPUT' /&gt;</InArgument>
+                                              <InArgument x:TypeArguments="x:String" x:Key="click_media_level_ingest">&lt;html app='chrome.exe' title='CLEAR' /&gt;&lt;webctrl aaname='ING' parentid='main_wfStatusBar' tag='SPAN' /&gt;</InArgument>
+                                              <InArgument x:TypeArguments="x:String" x:Key="get_status_selector">&lt;html app='chrome.exe' title='CLEAR' /&gt;&lt;webctrl parentid='drpDown_' tag='SPAN' /&gt;</InArgument>
+                                              <InArgument x:TypeArguments="x:String" x:Key="report_path">[Out_Config("Reportpath").ToString]</InArgument>
+                                              <InArgument x:TypeArguments="x:String" x:Key="Click_override_pass" xml:space="preserve">&lt;html app='chrome.exe' title='CLEAR' /&gt;
+&lt;webctrl parentid='drpDown_1' aaname='                             AQC Override Pass                         ' /&gt;</InArgument>
                                               <InArgument x:TypeArguments="x:String" x:Key="Click_information" />
-                                              <InArgument x:TypeArguments="x:String" x:Key="Click_preqc_level">
-                                                <Literal x:TypeArguments="x:String">&lt;html app='chrome.exe' title='CLEAR' /&gt;&lt;webctrl aaname='PRE-QC' parentid='main_wfStatusBar' /&gt;</Literal>
-                                              </InArgument>
+                                              <InArgument x:TypeArguments="x:String" x:Key="Click_preqc_level">&lt;html app='chrome.exe' title='CLEAR' /&gt;&lt;webctrl aaname='PRE-QC' parentid='main_wfStatusBar' /&gt;</InArgument>
                                             </ui:InvokeWorkflowFile.Arguments>
                                           </ui:InvokeWorkflowFile>
                                         </State.Entry>
@@ -438,7 +418,7 @@
                                               <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="Ui_error Is Nothing" sap2010:WorkflowViewState.IdRef="VisualBasicValue`1_3" />
                                             </Transition.Condition>
                                             <Transition.To>
-                                              <State x:Name="__ReferenceID5" DisplayName="Status_HF" sap:VirtualizedContainerService.HintSize="422,564" sap2010:WorkflowViewState.IdRef="State_7">
+                                              <State x:Name="__ReferenceID5" DisplayName="Status_HF" sap:VirtualizedContainerService.HintSize="134,61" sap2010:WorkflowViewState.IdRef="State_7">
                                                 <State.Entry>
                                                   <Sequence sap:VirtualizedContainerService.HintSize="376,204" sap2010:WorkflowViewState.IdRef="Sequence_8">
                                                     <sap:WorkflowViewStateService.ViewState>
@@ -454,7 +434,9 @@
                                                         <InArgument x:TypeArguments="x:String" x:Key="get_status_selector">
                                                           <Literal x:TypeArguments="x:String">&lt;html app='chrome.exe' title='CLEAR' /&gt;&lt;webctrl parentid='drpDown_' tag='SPAN' /&gt;</Literal>
                                                         </InArgument>
-                                                        <InArgument x:TypeArguments="x:String" x:Key="report_path" />
+                                                        <InArgument x:TypeArguments="x:String" x:Key="report_path">
+                                                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Out_Config(&quot;Reportpath&quot;).ToString" />
+                                                        </InArgument>
                                                         <InArgument x:TypeArguments="x:String" x:Key="click_hf_dm">
                                                           <Literal x:TypeArguments="x:String">&lt;html app='chrome.exe' title='CLEAR' /&gt;&lt;webctrl aaname='HF' parentid='main_wfStatusBar' idx='1' /&gt;</Literal>
                                                         </InArgument>
@@ -482,7 +464,7 @@
                                                       <x:Reference>__ReferenceID0</x:Reference>
                                                     </Transition.To>
                                                     <Transition.Condition>
-                                                      <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="not Ui_error is Nothing And Ui_error Is Nothing" sap2010:WorkflowViewState.IdRef="VisualBasicValue`1_4" />
+                                                      <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="Ui_error is Nothing Or not Ui_error Is Nothing" />
                                                     </Transition.Condition>
                                                   </Transition>
                                                 </State.Transitions>
