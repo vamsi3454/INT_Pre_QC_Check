@@ -8,7 +8,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>666,833</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>825,793</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>flowchart_ingest_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="52">
@@ -205,9 +205,9 @@
                           <OutArgument x:TypeArguments="x:String">[getStatus]</OutArgument>
                         </ui:GetValue.Value>
                       </ui:GetValue>
-                      <If Condition="[getStatus.Contains(&quot;Completed&quot;)]" sap:VirtualizedContainerService.HintSize="950,961" sap2010:WorkflowViewState.IdRef="If_2">
+                      <If Condition="[getStatus.Contains(&quot;Completed&quot;)]" sap:VirtualizedContainerService.HintSize="950,1389" sap2010:WorkflowViewState.IdRef="If_2">
                         <If.Then>
-                          <Sequence sap:VirtualizedContainerService.HintSize="478,913" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                          <Sequence sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_11">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -247,7 +247,7 @@
                                 </Sequence>
                               </ui:CommentOut.Body>
                             </ui:CommentOut>
-                            <Sequence sap:VirtualizedContainerService.HintSize="436,543" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                            <Sequence sap:VirtualizedContainerService.HintSize="436,909" sap2010:WorkflowViewState.IdRef="Sequence_10">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -272,25 +272,43 @@
                                 </ui:InvokeWorkflowFile.Arguments>
                               </ui:InvokeWorkflowFile>
                               <Delay Duration="00:00:03" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Delay_4" />
+                              <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="logout.xaml">
+                                <ui:InvokeWorkflowFile.Arguments>
+                                  <InArgument x:TypeArguments="x:String" x:Key="Logout_selector">
+                                    <Literal x:TypeArguments="x:String" xml:space="preserve">&lt;html app='chrome.exe' title='CLEAR' /&gt;
+&lt;webctrl parentid='userDropdown' innertext='Logout' idx='1' /&gt;</Literal>
+                                  </InArgument>
+                                </ui:InvokeWorkflowFile.Arguments>
+                              </ui:InvokeWorkflowFile>
+                              <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="Report.xaml">
+                                <ui:InvokeWorkflowFile.Arguments>
+                                  <InArgument x:TypeArguments="x:String" x:Key="addStatus">Pass</InArgument>
+                                  <InArgument x:TypeArguments="x:String" x:Key="addModules">Perform Logout</InArgument>
+                                  <InArgument x:TypeArguments="x:String" x:Key="addExptedResults">User logged out sucessfully</InArgument>
+                                  <InArgument x:TypeArguments="x:String" x:Key="Final_ReportPath">[report_path]</InArgument>
+                                  <InArgument x:TypeArguments="x:String" x:Key="SheetName">Results</InArgument>
+                                </ui:InvokeWorkflowFile.Arguments>
+                              </ui:InvokeWorkflowFile>
+                              <Delay Duration="00:00:03" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Delay_5" />
                               <ui:CloseWindow TimeoutMS="{x:Null}" UseWindow="{x:Null}" DisplayName="Close Window 'chrome.exe  CLEAR'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="CloseWindow_1" InformativeScreenshot="c4f393dc45f2b25127a14438a5879fce" Selector="&lt;html app='chrome.exe' title='CLEAR' /&gt;" WaitForReady="INTERACTIVE" />
                             </Sequence>
                           </Sequence>
                         </If.Then>
                         <If.Else>
-                          <Sequence sap:VirtualizedContainerService.HintSize="705,813" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                          <Sequence sap:VirtualizedContainerService.HintSize="705,1241" sap2010:WorkflowViewState.IdRef="Sequence_9">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <Sequence sap:VirtualizedContainerService.HintSize="663,721" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                            <Sequence sap:VirtualizedContainerService.HintSize="663,1149" sap2010:WorkflowViewState.IdRef="Sequence_8">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <If Condition="[getStatus.Contains(&quot;InProgress&quot;)]" sap:VirtualizedContainerService.HintSize="621,629" sap2010:WorkflowViewState.IdRef="If_3">
+                              <If Condition="[getStatus.Contains(&quot;InProgress&quot;)]" sap:VirtualizedContainerService.HintSize="621,1057" sap2010:WorkflowViewState.IdRef="If_3">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -298,7 +316,7 @@
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
                                 <If.Then>
-                                  <Sequence sap:VirtualizedContainerService.HintSize="376,481" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                                  <Sequence sap:VirtualizedContainerService.HintSize="376,909" sap2010:WorkflowViewState.IdRef="Sequence_12">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -322,11 +340,28 @@
                                         <InArgument x:TypeArguments="x:String" x:Key="SheetName">Results</InArgument>
                                       </ui:InvokeWorkflowFile.Arguments>
                                     </ui:InvokeWorkflowFile>
+                                    <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Delay_6" />
+                                    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="logout.xaml">
+                                      <ui:InvokeWorkflowFile.Arguments>
+                                        <InArgument x:TypeArguments="x:String" x:Key="Logout_selector" xml:space="preserve">&lt;html app='chrome.exe' title='CLEAR' /&gt;
+&lt;webctrl parentid='userDropdown' innertext='Logout' idx='1' /&gt;</InArgument>
+                                      </ui:InvokeWorkflowFile.Arguments>
+                                    </ui:InvokeWorkflowFile>
+                                    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="Report.xaml">
+                                      <ui:InvokeWorkflowFile.Arguments>
+                                        <InArgument x:TypeArguments="x:String" x:Key="addStatus">Pass</InArgument>
+                                        <InArgument x:TypeArguments="x:String" x:Key="addModules">Perform Logout</InArgument>
+                                        <InArgument x:TypeArguments="x:String" x:Key="addExptedResults">User logged out sucessfully</InArgument>
+                                        <InArgument x:TypeArguments="x:String" x:Key="Final_ReportPath">[report_path]</InArgument>
+                                        <InArgument x:TypeArguments="x:String" x:Key="SheetName">Results</InArgument>
+                                      </ui:InvokeWorkflowFile.Arguments>
+                                    </ui:InvokeWorkflowFile>
+                                    <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Delay_7" />
                                     <ui:CloseWindow TimeoutMS="{x:Null}" UseWindow="{x:Null}" DisplayName="Close Window 'chrome.exe  CLEAR'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="CloseWindow_2" InformativeScreenshot="6c27e29297358236c95f516b3dee5f90" Selector="&lt;html app='chrome.exe' title='CLEAR' /&gt;" WaitForReady="INTERACTIVE" />
                                   </Sequence>
                                 </If.Then>
                                 <If.Else>
-                                  <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+                                  <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="456,1228" sap2010:WorkflowViewState.IdRef="TryCatch_1">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -334,13 +369,13 @@
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
                                     <TryCatch.Try>
-                                      <Sequence sap:VirtualizedContainerService.HintSize="418,573" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                                      <Sequence sap:VirtualizedContainerService.HintSize="418,1001" sap2010:WorkflowViewState.IdRef="Sequence_14">
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
-                                        <Sequence sap:VirtualizedContainerService.HintSize="376,481" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                                        <Sequence sap:VirtualizedContainerService.HintSize="376,909" sap2010:WorkflowViewState.IdRef="Sequence_13">
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -363,6 +398,25 @@
                                               <InArgument x:TypeArguments="x:String" x:Key="SheetName">Results</InArgument>
                                             </ui:InvokeWorkflowFile.Arguments>
                                           </ui:InvokeWorkflowFile>
+                                          <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Delay_8" />
+                                          <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" UnSafe="False" WorkflowFileName="logout.xaml">
+                                            <ui:InvokeWorkflowFile.Arguments>
+                                              <InArgument x:TypeArguments="x:String" x:Key="Logout_selector">
+                                                <Literal x:TypeArguments="x:String" xml:space="preserve">&lt;html app='chrome.exe' title='CLEAR' /&gt;
+&lt;webctrl parentid='userDropdown' innertext='Logout' idx='1' /&gt;</Literal>
+                                              </InArgument>
+                                            </ui:InvokeWorkflowFile.Arguments>
+                                          </ui:InvokeWorkflowFile>
+                                          <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_9" UnSafe="False" WorkflowFileName="Report.xaml">
+                                            <ui:InvokeWorkflowFile.Arguments>
+                                              <InArgument x:TypeArguments="x:String" x:Key="addStatus">Pass</InArgument>
+                                              <InArgument x:TypeArguments="x:String" x:Key="addModules">Perform Logout</InArgument>
+                                              <InArgument x:TypeArguments="x:String" x:Key="addExptedResults">User logged out sucessfully</InArgument>
+                                              <InArgument x:TypeArguments="x:String" x:Key="Final_ReportPath">[report_path]</InArgument>
+                                              <InArgument x:TypeArguments="x:String" x:Key="SheetName">Results</InArgument>
+                                            </ui:InvokeWorkflowFile.Arguments>
+                                          </ui:InvokeWorkflowFile>
+                                          <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Delay_9" />
                                           <ui:CloseWindow TimeoutMS="{x:Null}" UseWindow="{x:Null}" DisplayName="Close Window 'chrome.exe  CLEAR'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="CloseWindow_3" InformativeScreenshot="6c27e29297358236c95f516b3dee5f90" Selector="&lt;html app='chrome.exe' title='CLEAR' /&gt;" WaitForReady="INTERACTIVE" />
                                         </Sequence>
                                       </Sequence>
